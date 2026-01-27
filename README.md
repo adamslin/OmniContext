@@ -1,4 +1,4 @@
-# IntelligentBot: An RAG-Powered Q&A System
+# OmniContext: An RAG-Powered Q&A System
 
 A Retrieval-Augmented Generation (RAG) system built with Google Gemini, LangChain, and ChromaDB. Features multi-turn conversation support, streaming responses, and a modern web interface.
 
