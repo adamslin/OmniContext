@@ -1,0 +1,47 @@
+# 环境变量 (包含 API Key，绝对不要提交!)
+.env
+
+# 数据文件夹 (用户上传的 PDF 文档)
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虚拟环境
+venv/
+env/
+.venv/
+.env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 向量数据库 (文件较大，可通过 ingest.py 重新生成)
+db/
+
+# 系统文件
+.DS_Store
+Thumbs.db
