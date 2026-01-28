@@ -1,0 +1,24 @@
+# RAG 智能问答系统 - Docker Compose 配置
+
+version: '3.8'
+
+services:
+  rag-app:
+    build: .
+    container_name: rag-intelligent-bot
+    ports:
+      - "8000:8000"  # FastAPI 后端
+      - "8501:8501"  # Streamlit 前端
+    volumes:
+      - ./data:/app/data      # PDF 文档目录
+      - ./db:/app/db          # 向量数据库目录
+      - ./.env:/app/.env:ro   # 环境变量文件 (只读)
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

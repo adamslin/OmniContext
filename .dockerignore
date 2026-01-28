@@ -1,0 +1,33 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 本地数据 (通过 volume 挂载)
+data/
+db/
+
+# 环境变量 (通过 volume 挂载)
+.env
+
+# 其他
+*.md
+*.sh
+!entrypoint.sh
+init_vps.sh
+run.sh
