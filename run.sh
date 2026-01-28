@@ -60,9 +60,9 @@ cleanup() {
         kill $FRONTEND_PID 2>/dev/null || true
     fi
     
-    # 清理端口
-    lsof -ti:8000 | xargs kill -9 2>/dev/null || true
-    lsof -ti:8501 | xargs kill -9 2>/dev/null || true
+    # 清理端口 (使用 fuser 或跳过)
+    fuser -k 8000/tcp 2>/dev/null || true
+    fuser -k 8501/tcp 2>/dev/null || true
     
     echo -e "${GREEN}👋 服务已停止${NC}"
     exit 0
